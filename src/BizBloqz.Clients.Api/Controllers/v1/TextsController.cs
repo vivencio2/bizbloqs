@@ -23,9 +23,14 @@ namespace BizBloqz.Clients.Api.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(bool), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(Exception), StatusCodes.Status400BadRequest)]
-        public async Task<bool> CreateTexts([FromBody] string value)
+        public async Task<bool> CreateTexts([FromBody]TextValue textValue)
         {
-            return await Mediator.Send(new CreateTextCommand(value));
+            return await Mediator.Send(new CreateTextCommand(textValue.Value));
         }
+    }
+
+    public class TextValue
+    {
+        public string Value { get; set; }
     }
 }

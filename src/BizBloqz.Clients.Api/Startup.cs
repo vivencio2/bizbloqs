@@ -25,6 +25,14 @@ namespace BizBloqz.Clients.Api
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", builder => {
+                    builder.AllowAnyOrigin();
+                    builder.AllowAnyMethod();
+                    builder.AllowAnyHeader();
+                });
+            });
             services.AddControllers();
             services.AddRepositories(Configuration);
             services.AddManagers();
@@ -38,6 +46,7 @@ namespace BizBloqz.Clients.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+            
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
@@ -45,8 +54,9 @@ namespace BizBloqz.Clients.Api
                 c.RoutePrefix = string.Empty;
             });
             app.UseHttpsRedirection();
-
+            app.UseCors("AllowAll");
             app.UseRouting();
+            
 
             app.UseAuthorization();
 
