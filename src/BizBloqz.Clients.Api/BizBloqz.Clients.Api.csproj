@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>8ca05ba8-1367-4af0-b227-c9883407816a</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BizBloqz.Application\BizBloqz.Application.csproj" />
+    <ProjectReference Include="..\BizBloqz.Domain\BizBloqz.Domain.csproj" />
+    <ProjectReference Include="..\BizBloqz.Infrastructure.SqlServer\BizBloqz.Infrastructure.SqlServer.csproj" />
+    <ProjectReference Include="..\BizBloqz.Services\BizBloqz.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>

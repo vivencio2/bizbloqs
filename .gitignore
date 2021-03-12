@@ -1,0 +1,22 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/BizBloqz.Assessment
+/src/BizBloqz.Application/bin/Debug/netstandard2.0
+/src/BizBloqz.Application/obj
+/src/BizBloqz.Application/BizBloqz.Application.csproj.user
+/src/BizBloqz.Clients.Api/bin/Debug/netcoreapp3.1
+/src/BizBloqz.Clients.Api/obj
+/src/BizBloqz.Domain/bin/Debug/netstandard2.0
+/src/BizBloqz.Domain/obj
+/src/BizBloqz.Infrastructure.SqlServer/bin/Debug/netstandard2.0
+/src/BizBloqz.Infrastructure.SqlServer/obj
+/src/BizBloqz.Services/bin/Debug/netstandard2.0
+/src/BizBloqz.Services/obj
+/tests/BizBloqz.Application.UnitTests/bin/Debug/netcoreapp3.1
+/tests/BizBloqz.Application.UnitTests/obj
+/tests/BizBloqz.Domain.UnitTests/bin/Debug/netcoreapp3.1
+/tests/BizBloqz.Domain.UnitTests/obj
+/tests/BizBloqz.Services.UnitTests/bin/Debug/netcoreapp3.1
+/tests/BizBloqz.Services.UnitTests/obj
